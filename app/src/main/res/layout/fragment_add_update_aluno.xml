@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/edtTxtNome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nome"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edtTxtTurma"
+        app:layout_constraintEnd_toStartOf="@+id/edtTxtSobrenome"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtTxtSobrenome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Sobrenome"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edtTxtTurma"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/edtTxtNome"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtTxtTurma"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Turma"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtNome" />
+
+    <Button
+        android:id="@+id/btnAddAluno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="adicionar aluno"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtTurma" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
