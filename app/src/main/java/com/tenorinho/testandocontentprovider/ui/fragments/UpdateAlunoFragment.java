@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 import com.tenorinho.testandocontentprovider.R;
@@ -19,6 +20,7 @@ import static com.tenorinho.testandocontentprovider.data.AlunosHelperDB.COLUNA_T
 public class UpdateAlunoFragment extends Fragment {
 
     private EditText edtNome;
+    private TextView txtTitle;
     private EditText edtSobrenome;
     private EditText edtTurma;
     private Button btnAddAluno;
@@ -30,10 +32,12 @@ public class UpdateAlunoFragment extends Fragment {
     @Override public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState){
         super.onCreateView(inflater, parent, savedInstanceState);
         View layout = inflater.inflate(R.layout.fragment_add_update_aluno, parent, false);
+        txtTitle = layout.findViewById(R.id.txtTitle);
         edtNome = layout.findViewById(R.id.edtTxtNome);
         edtSobrenome = layout.findViewById(R.id.edtTxtSobrenome);
         edtTurma = layout.findViewById(R.id.edtTxtTurma);
         btnAddAluno = layout.findViewById(R.id.btnAddAluno);
+        txtTitle.setText("Atualizar");
         btnAddAluno.setText("ATUALIZAR ALUNO");
         Aluno a = this.getArguments().getParcelable("args");
         id = a.getID();
